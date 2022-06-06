@@ -6,13 +6,9 @@ class Anyenv < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "64a65deada2b73eea41aaf1072d015c193e46cc38d524e3770d8e319b56b54fe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "64a65deada2b73eea41aaf1072d015c193e46cc38d524e3770d8e319b56b54fe"
-    sha256 cellar: :any_skip_relocation, monterey:       "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, big_sur:        "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, catalina:       "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, mojave:         "3cbde52463957a85f70e02c7c4e4ae793a3d5cbd6a44db6ec930f6f370db8b66"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "64a65deada2b73eea41aaf1072d015c193e46cc38d524e3770d8e319b56b54fe"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/anyenv"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "64a65deada2b73eea41aaf1072d015c193e46cc38d524e3770d8e319b56b54fe"
   end
 
   def install
