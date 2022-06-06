@@ -6,12 +6,9 @@ class Atmos < Formula
   license "Apache-2.0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "0bdb209da38f7629ec13e8865ee684ce0646aedcd37bde534da11fe58467b91a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "a2a6ebb10235617b22bf69bd16ef792b6af95c9e0147cac624b1f236c9f65578"
-    sha256 cellar: :any_skip_relocation, monterey:       "1ec9405059e0cfe772511576e32f1f4259ed945bfbd4b91cefeaa656600738af"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fff734771d6e8082b59e9ff2208efbbd1241550e54c82646a38f710b2c522e44"
-    sha256 cellar: :any_skip_relocation, catalina:       "0c893b4d553013692723fd48a097f6e8547182f5b4fac66b48581037f5f49d1d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a39b5315845c69f06198e82c5a22764a7e4ee4521ffcec7dd1de9edd57b9828f"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/atmos"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "111e3d449339087908caec5c44261db12ec040b38cacbd0f8685347e00757c55"
   end
 
   depends_on "go" => :build
