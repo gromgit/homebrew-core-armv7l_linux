@@ -55,12 +55,9 @@ class Readline < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "9d9d9512c80c6ae7c8281da84533222d90cb5e06accdfa98e0bff37672793cec"
-    sha256 cellar: :any,                 arm64_big_sur:  "08efc469d237689a9619ec6b3ea931793d03597e89bd622ebd122b7256d7a446"
-    sha256 cellar: :any,                 monterey:       "976185ec243284d74eb8b9c554d944cbc0208c26495193bcd28fdf12a08f134e"
-    sha256 cellar: :any,                 big_sur:        "1eaadc077c1584e296810abbcefd2e90bc055ddbcb675f0668e86f95f2229212"
-    sha256 cellar: :any,                 catalina:       "7346c1c37bfa5f9b9661450e8d7b627012dfc551813e3df48508a4fa1a05e6e4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2b46aff4f720e0f15601aecb2efd4ae7c2a3454b2fad91b196728ed4ee4f12c3"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/readline"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "43fda3f1fe32e34b7b9459bd2008613825af573ea2c6d34d0cde7c7502b44313"
   end
 
   keg_only :shadowed_by_macos, "macOS provides BSD libedit"
