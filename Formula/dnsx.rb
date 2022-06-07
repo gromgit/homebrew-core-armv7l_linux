@@ -1,0 +1,26 @@
+class Dnsx < Formula
+  desc "DNS query and resolution tool"
+  homepage "https://github.com/projectdiscovery/dnsx"
+  url "https://github.com/projectdiscovery/dnsx/archive/v1.1.0.tar.gz"
+  sha256 "5cb53066b689982be0d08322c40a82320888184cf5ee2a7fce118d566261de20"
+  license "MIT"
+  head "https://github.com/projectdiscovery/dnsx.git", branch: "master"
+
+  bottle do
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/dnsx"
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "128e0f140cc66be3c88e6cd6e922c621bce534ea8c82630e1ae94f333d784f41"
+  end
+
+  depends_on "go" => :build
+
+  def install
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/dnsx"
+  end
+
+  test do
+    (testpath/"domains.txt").write "docs.brew.sh"
+    expected_output = "docs.brew.sh [homebrew.github.io]"
+    assert_equal expected_output,
+      shell_output("#{bin}/dnsx -silent -l #{testpath}/domains.txt -cname -resp").strip
+  end
+end
