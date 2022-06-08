@@ -6,14 +6,9 @@ class SsllabsScan < Formula
   license "Apache-2.0"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "21c59e50196234b6cabed14cd45c4e905dd8bf38f77491431c2da7427c3ede5e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "445a6d45341a1e6bf831f04eb00e87ca5e39df27685af0da5504e64e3fbb1efb"
-    sha256 cellar: :any_skip_relocation, monterey:       "9cd0b9e4f6980fb49897f09adb167a5a7be7f7d4405f261829b713cb262e713a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "bedc2ae76ea62f469af8ca941f894016b053edd0c598e4845bcbe95e73c344a3"
-    sha256 cellar: :any_skip_relocation, catalina:       "01c7e2503e8793f79149a3115dffff286ab0db876ccbfe6d8bb11ed54f27ba38"
-    sha256 cellar: :any_skip_relocation, mojave:         "eb44e540aba0e6a209ab3820a168184f39ddd470673093c7a3dc87a0e70eab42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "9298cfa3c9eb7b7effb0f924f9998e63406d3bfacd4b4df9785a0371138699e2"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/ssllabs-scan"
+    rebuild 2
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "b33ab99deb6b5adf1b7c73ac1c02b7364e03ad9d5675b0bc5541ee6d3f59d609"
   end
 
   depends_on "go" => :build
