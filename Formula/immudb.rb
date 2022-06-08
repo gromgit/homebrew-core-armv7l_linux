@@ -11,12 +11,9 @@ class Immudb < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "2393f19273d615e30094e977971d68a9bdf9bc54cb537a9425026ad5763ad10a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4f0c24ed6028086b7236c8a1bde09538766874d386eb60ffbe63aba75f61a4ca"
-    sha256 cellar: :any_skip_relocation, monterey:       "049f891f1418410463fd669eb5cf413b050bf66765b61f76866846ee56a1511a"
-    sha256 cellar: :any_skip_relocation, big_sur:        "16b7fa3ffd1135b46ce6074a0c9d2eed356e640c6d7bbf3a25f92a5cb03bc205"
-    sha256 cellar: :any_skip_relocation, catalina:       "ba726a496ffda07fe32a4de0dae7277492b8e4d020f0d74681e657373f460cbd"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "8f3ccae88b16b3023a229e9473e13bf12a354c9d8e22f99852524064c81e89e2"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/immudb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "d0cac1baea92090c1603848ad17c5b77aafc9f5537e63e6584216e65ef481e30"
   end
 
   depends_on "go" => :build
