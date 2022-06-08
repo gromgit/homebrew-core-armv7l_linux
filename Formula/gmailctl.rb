@@ -7,12 +7,9 @@ class Gmailctl < Formula
   head "https://github.com/mbrt/gmailctl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "13a173734e62e0e060e03ccd0049289f0dbaa687d376cde9926a4834d9a7dde5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "0330737821e56d883585187c5db80abd81faf4d014869d2e2cad3eb0e34bf17e"
-    sha256 cellar: :any_skip_relocation, monterey:       "5602a349c56579915cf29c3995f3a214345c4b354bc8875eb8c639040745a535"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4393fd98611c97ba9bacf53166ce0e42e729d8ea89b697f3e81abccf5bc006f8"
-    sha256 cellar: :any_skip_relocation, catalina:       "2b694152a729cdb850ba5eac3750247999344a078beddfdad02bf024fb8637c4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "ea955ccf87bfcc188d8132d2ef86b0e520843b61a5c4d9d54ae9522721cd2c55"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/gmailctl"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "4e18dce59fe504af1078a660f75d1fad8e30c9ab79abf09f6b338f5de5705dd4"
   end
 
   depends_on "go" => :build
