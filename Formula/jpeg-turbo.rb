@@ -7,12 +7,9 @@ class JpegTurbo < Formula
   head "https://github.com/libjpeg-turbo/libjpeg-turbo.git", branch: "main"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "0fe5fd23465784fe56f97c29589a72eacc21f8fb75f8c84e69da724637aee262"
-    sha256 cellar: :any,                 arm64_big_sur:  "e47a04f605090bfa71f2bbc71c84ea4f2a0c3986ccc8f61859b31247ed0e9e08"
-    sha256 cellar: :any,                 monterey:       "1ee0a0cfd7ceeae5b1bcccc105d47ba9adbf74e53eccde118b4849b654a9cdb9"
-    sha256 cellar: :any,                 big_sur:        "14c6fdc80b47eef6b88114cad94f0b311d8d2766dae25ba2660797ccaaa1f4da"
-    sha256 cellar: :any,                 catalina:       "54b3b74ffd0af4ee85a3984af36f8cce5be166a2dd74488e64f266716fcfb5d5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cfc674d48947c45d2018420a3e0eb4ae4d0778984ad5a478e165498cafe9b118"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/jpeg-turbo"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "418cd0b6bb41dd11377ee8d493ad9086b01727d7493cf061ac0c3c7062839cde"
   end
 
   keg_only "libjpeg-turbo is not linked to prevent conflicts with the standard libjpeg"
