@@ -6,12 +6,9 @@ class Pgweb < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "4ab4d7f6ef6f033ba9e255ba5ba1192f2f835e6a430d03dc553872011d516d14"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "4de10cd67782077f391a212cecc978605813488eaf1f09d66a339aaf99f1b6c7"
-    sha256 cellar: :any_skip_relocation, monterey:       "9ef3651c6bca97057478b218a913d4d83c53825283e82f20a40138ee278de3c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "65bbbca6901f6bf3ae3022250e2f138ad9dbc386476503641eaac9bbac4585c1"
-    sha256 cellar: :any_skip_relocation, catalina:       "a30327b12de71ad523c7efdc94e53b1f7b855879c8396499f7d095d84a39a946"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7f7e79fae8d7692422706790b129dd609c4b93d5bcf7e6d67343e19e53fba034"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/pgweb"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "22c48cd6ee2ebaaa10d3d42295de10d8058a3f8c3014ca3c95d8f4bf8822b79a"
   end
 
   depends_on "go" => :build
