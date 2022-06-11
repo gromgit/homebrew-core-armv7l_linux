@@ -13,12 +13,9 @@ class Mercurial < Formula
   end
 
   bottle do
-    sha256 arm64_monterey: "4b27cbd0e4a4274f0c04970ffc24f8939de6fef3209f2b8b06eb0b92ea81c971"
-    sha256 arm64_big_sur:  "d8d7c70a989b6967a6603735c18a70597c3b2031dd5214432e5d981dc815b320"
-    sha256 monterey:       "b39239decd8c9060928bc1b4d22cf8a1b9916b33b8d28a4a9e01778d9a4f592e"
-    sha256 big_sur:        "80c671394593190144da849653bcf4cbd93ffc005d34e0b142888c7cd64fc237"
-    sha256 catalina:       "a339698faf0599d97e8b9465ba38e8ff4af7e256f91fc73a332af35ebf1a72d9"
-    sha256 x86_64_linux:   "4f7e2d74b2aee20d8485d159db970995ea4109622c08c43146940c4d8ed52d06"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/mercurial"
+    rebuild 1
+    sha256 armv7l_linux: "ce6cfda92024beaadf1fc55bd194f25a966b424ca363182aeb8242dc2041a8c7"
   end
 
   depends_on "python@3.10"
