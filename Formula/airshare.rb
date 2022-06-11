@@ -9,12 +9,9 @@ class Airshare < Formula
   revision 3
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "bd30756c923e0e759afa512a48793b655cbf144fd789c821d43695657061d6fe"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "1d903173816649a6e11274c812feb998fca397d5e42206094f7240d57299d346"
-    sha256 cellar: :any_skip_relocation, monterey:       "03240236782404a56ae0a9d334320144fd7de5bce76f4e8aa06bb9a6e81b3aa5"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4c96b3d2573b307f4ff1c721e6c69f3ca9046e49022009ca67e8407f0c3767f3"
-    sha256 cellar: :any_skip_relocation, catalina:       "b0021b86bb51f57dc543b5131c23ee599a51eb237d21b7d3f617b95f58362ad4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "78389693e1ffd86b384026b6617cee0d28b64c6ed4d9c6d7f46833b696b5f070"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/airshare"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "8dedece6dd8d57544679ac022f1811b6cfe4163d280e6963739e507a32ffc4e5"
   end
 
   depends_on "python@3.10"
