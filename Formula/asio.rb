@@ -12,12 +12,9 @@ class Asio < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "b3ea7931fb9e539f59bbf21f4647268487036aace40cda956d08507fe87bb90b"
-    sha256 cellar: :any,                 arm64_big_sur:  "5a8c945335115a2da264ec74162e57a5d92f4064544899c4df375a3cabc5e06a"
-    sha256 cellar: :any,                 monterey:       "98f1add58eeb5d6eb9d886781ef62dd0b6572dd8252252acdaa2bc1d3674c875"
-    sha256 cellar: :any,                 big_sur:        "dc03f2f6433eadeb86832d94a241c36a5be0eb23afde03644a11a62403a9b795"
-    sha256 cellar: :any,                 catalina:       "7c8ae5863a8abf20d8d811ec943c8bff0e702b7dc4e79ebbab9310bcc7a99e44"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "723acb5f60519bdc4426ac9d6e4e5689f94c794b615b6f71759d26eda1385df1"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/asio"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "a297489d9b897c0db79590f307b437bcbaf8cb6a52905e67f63b2cafebf0c062"
   end
 
   depends_on "autoconf" => :build
