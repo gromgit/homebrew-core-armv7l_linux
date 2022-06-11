@@ -7,12 +7,9 @@ class CmarkGfm < Formula
   license "BSD-2-Clause"
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "3fce983843324792b1a4df8be5b242fc0cee23200e7015141bf12ef36ca5f2a9"
-    sha256 cellar: :any,                 arm64_big_sur:  "ddf818d97cc545f1c13b7613109f45786a3c2b653b2b148b36ecb40fb48af04e"
-    sha256 cellar: :any,                 monterey:       "dc4f61c2d6e50fc750f3b82404bda9bc4ce9f47f6415722b78dc75cf8216b77d"
-    sha256 cellar: :any,                 big_sur:        "6f342b5088afeeeee23b0ea4fed9bc0ef4f46ad5532985fe93a2c131c37c9d2c"
-    sha256 cellar: :any,                 catalina:       "8c99f03ce18b3c4fdc9e836e8c3fc1054883c9fd7fd4f98be1e87d2b09a86c42"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9c19ca94d92227351f56497a01faa27f20a30cdbe04a8c8636f6d55da0a044e"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/cmark-gfm"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "7bbdfe0df83b7eb2c04cb15f9fb7b44b221bfa0bd3e658b1796d6433742838ba"
   end
 
   depends_on "cmake" => :build
