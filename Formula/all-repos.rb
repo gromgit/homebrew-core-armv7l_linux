@@ -8,12 +8,9 @@ class AllRepos < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "7c5171cf3b0754da46d3b7da9e216b84c08c70cfea6fab3f414e2347cce23a36"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7c5171cf3b0754da46d3b7da9e216b84c08c70cfea6fab3f414e2347cce23a36"
-    sha256 cellar: :any_skip_relocation, monterey:       "ed2568f9c07408fd2e99791e96c5bcdc9cca58d77d58d9e9e218df55e11046f1"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ed2568f9c07408fd2e99791e96c5bcdc9cca58d77d58d9e9e218df55e11046f1"
-    sha256 cellar: :any_skip_relocation, catalina:       "ed2568f9c07408fd2e99791e96c5bcdc9cca58d77d58d9e9e218df55e11046f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "60db1f33800d012e10246e7b09c6a34f71d58f606600ae5dfdd51fced6022334"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/all-repos"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "170ec419784cf0b3dc0fc2891797fb96520dbc8a3c18c3bcb66be60e7919ed5f"
   end
 
   depends_on "python@3.10"
