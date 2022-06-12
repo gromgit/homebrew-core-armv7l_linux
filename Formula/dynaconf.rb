@@ -8,12 +8,9 @@ class Dynaconf < Formula
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e2bbb63ac41bf42f6ed9779029f5da69751b323c39b04ecb0523f583d303a6c1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "e2bbb63ac41bf42f6ed9779029f5da69751b323c39b04ecb0523f583d303a6c1"
-    sha256 cellar: :any_skip_relocation, monterey:       "a55a36bc394a5bc1833e859f27bf11c0dd3034a41249e63f793d14d8f53fcd7d"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a55a36bc394a5bc1833e859f27bf11c0dd3034a41249e63f793d14d8f53fcd7d"
-    sha256 cellar: :any_skip_relocation, catalina:       "a55a36bc394a5bc1833e859f27bf11c0dd3034a41249e63f793d14d8f53fcd7d"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "a91a7b187dcc010a3857ca276e34d3733bf2e5210a851d1c36c67566bb537309"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/dynaconf"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "b96c57c2b6dce4b1b789338e794a89156ed516a826375f1a43402b57f3b4016d"
   end
 
   depends_on "python@3.10"
