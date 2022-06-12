@@ -7,12 +7,9 @@ class Dylibbundler < Formula
   head "https://github.com/auriamg/macdylibbundler.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "906a8b5293262c5416a17657e70bd7283ef007a2eaac10b0627729f14da3d685"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d0c87ee93247dfb14af9096049d1eac119b2f52bed32eba7e8b7743ff3de76c4"
-    sha256 cellar: :any_skip_relocation, monterey:       "7459d9405ef5405c0be7fbc6db4987fbc4a4ce1dbca93c8902b945dd7b9d3307"
-    sha256 cellar: :any_skip_relocation, big_sur:        "f6699edbfc9c65203e3dba211bfbed054e1c98420155f7aa2c90c2c08de1419d"
-    sha256 cellar: :any_skip_relocation, catalina:       "f0e0cb6d2d0f852911795684b2817a13357c16077f153fead1e40fdc0e84edfe"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "c9f64c147777fe104678a78648a73fbed44471f02ba99698d382565f26b20c98"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/dylibbundler"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "f0f5b47f1ebfa789ebfb909701ac11e058196ef9eb30f31e23f3227173881cf6"
   end
 
   def install
