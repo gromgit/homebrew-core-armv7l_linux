@@ -12,12 +12,9 @@ class Fastlane < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "614b8e883695ffd17287779a9f064f73b71c3dccf93c6405e262205e9ef1e1c5"
-    sha256 cellar: :any,                 arm64_big_sur:  "50e7bacd9202c75647d26f96e9c8affa07ab3e5a26d770b2d9af80199122fc56"
-    sha256 cellar: :any,                 monterey:       "43893bb31b8c03b003a03590347570267536e796d7ec812fcb25a5df3b5a3a3b"
-    sha256 cellar: :any,                 big_sur:        "e8fd791eed001272711b58c66e5e43a8bf0cbc86374564bbd0c280231fb1d830"
-    sha256 cellar: :any,                 catalina:       "80f6df14da7964fe33450e6ef5bbe75bbc810a335c982539108cdde2cba4f29e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "354b59c35e1ddd565a333bc900f6eb3d16bebf5bbc09044f8c33d4462f02d691"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/fastlane"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "3ad47d2fa2a2e8f67158da539ae591ea439252117a8954d734e2198c448402be"
   end
 
   depends_on "ruby"
