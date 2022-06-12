@@ -9,12 +9,9 @@ class Commitizen < Formula
   head "https://github.com/commitizen-tools/commitizen.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cc7e72ac7cbc7f3d4a1d96ca6353d786af0a189871c2c288d6b401c7f760c78a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b96ff09edf0f978fe271f7c2654bb6331ad7f3c2d0fbfa8ded4cff909cc9ded2"
-    sha256 cellar: :any_skip_relocation, monterey:       "4e603f8756ea0bf4b53cd33834f9a917b0f7942be071f1a6757472165154000b"
-    sha256 cellar: :any_skip_relocation, big_sur:        "ce17004a6eda26135e15e91954f3e56172b7da74476d6db875357667364ce9f0"
-    sha256 cellar: :any_skip_relocation, catalina:       "1b327ed502a2e06298b116ff4e12438e2dad07012460a5802ce5534eb7f0feb8"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "adcded04a355e3d469563529dcae1c1b9563ebc1b20659337562496efa7d018a"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/commitizen"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "258edb38f343cb779ba364cd6588ccd45b40ec7c0e2f9716cb75433d25483285"
   end
 
   depends_on "python@3.10"
