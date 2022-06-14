@@ -13,12 +13,9 @@ class Imapsync < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "d13a9bda6f684909de20e10c65430836bac345c6bed1ea1d0d37a0f655eb258d"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "583aef334a783f9efed892bb52fc8916ba4b219843dd359557984fddcecc9bf8"
-    sha256 cellar: :any_skip_relocation, monterey:       "eeb5fb8230ad6f55a2fc61e76fc35cefc510a6bdc5d46f6c1f542c45c6a29778"
-    sha256 cellar: :any_skip_relocation, big_sur:        "c0d4e602efe6f502e4138f718a951af32c56676a6c304bbd0b2cbb55feff8c55"
-    sha256 cellar: :any_skip_relocation, catalina:       "54546bcbf94e9bb504cb330c816d59ca087f9e8ed2825ff022574c6d5a9f0edb"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "f9f9b3065ad3cf7a8e4eb4000403ef859d65999cc97160c82259d130a0ae9f8d"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/imapsync"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "a834d30b9a3fff43ec1ec9fa7d7a66b573942f067a7fe919cf0723a8d56a1156"
   end
 
   depends_on "pod2man" => :build
