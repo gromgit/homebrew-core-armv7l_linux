@@ -13,12 +13,9 @@ class Isort < Formula
   end
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5d80e1cffa56c250a8243033e2e6585f26fdc221832ef8de29605b1a6faa0d5"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "daeeb039c407bf866eb0434385719cf8b1339aae5cf68be775634ba9731ed825"
-    sha256 cellar: :any_skip_relocation, monterey:       "9e7b35776d714719ba5cc4ccf3d1414d85f867e9df737318e189362e006e3fdd"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4b51b857b09c1b94786bbc617d1f98b9415392cf01791562598b6e7415a932f9"
-    sha256 cellar: :any_skip_relocation, catalina:       "ea516d354aeaa438e9622b444d163a6b61ed0c7784c421117b0fd611010472c6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "3cf4067868dd02d11c067e12acd8091a7aadb41c234e0250f46824328e3f1598"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/isort"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "ab46bba585e7359b6dec1f88933d0f8e2483f9d88b28508425f3e5272ea53c55"
   end
 
   depends_on "python@3.10"
