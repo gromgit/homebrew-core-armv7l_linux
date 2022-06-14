@@ -12,12 +12,9 @@ class Htop < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_monterey: "50735eb9e09ec8087f04640430d4bdac4941a0ce584dd1e52ec8ec8a58d743ed"
-    sha256 cellar: :any,                 arm64_big_sur:  "02e592c85dbfe7ee6bb0a2bf5275cc6434710aaa30d7756d11a363946a5cb76e"
-    sha256 cellar: :any,                 monterey:       "13ede571c82f9ed6f55d8ef081bd7db0f11ca8945dc306594465384f38f693f4"
-    sha256 cellar: :any,                 big_sur:        "3004679265a03a1d4d5162895e79de630535a7d6ebe0c59592cb307ed9aeb5d5"
-    sha256 cellar: :any,                 catalina:       "6a0040374a95b5adf832d15b69ee80fbe3fc24190f523f46e199e0cb60fd9057"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "864f057daa4b3361cf076523e9a532763153a512cbd7da90bfb6b10ecfca0c05"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/htop"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "6d4f17b85de4cc63db60402dba05c091b812b0dce1f795e16e11d4bc0959f48e"
   end
 
   depends_on "autoconf" => :build
