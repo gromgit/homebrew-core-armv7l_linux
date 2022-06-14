@@ -10,12 +10,9 @@ class Ipv6calc < Formula
   license "GPL-2.0-only"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ca999fa659227c7bdca2b63006529c0e8dad64720e607cf94e1835e27c0a78a1"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b545b0a609090f95d5b2d3007808ae8817cad93a78cf7ba89cb6554a0e41e2bc"
-    sha256 cellar: :any_skip_relocation, monterey:       "b1925cb855c9999f95581d3694cdeb7a545ae704fa8f7d9f96231030ac712bc9"
-    sha256 cellar: :any_skip_relocation, big_sur:        "fee579c01e98ca1a5123a3334f214a0d62c046440c9605c7f476b8ddc670c612"
-    sha256 cellar: :any_skip_relocation, catalina:       "d83cd743ee2ad297ca525fd3de999f8025b54d404fc8261112c5a0481a69e7cf"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4ddfd1020b80b018704b06593b591928ba6e4fe280a3d5b1757eb0cb2a32b380"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/ipv6calc"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "844b2f44ae1bfcf6b8ee14428ad437977819cfea54f010462d0de87a25d457e1"
   end
 
   uses_from_macos "perl"
