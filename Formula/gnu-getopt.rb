@@ -6,12 +6,9 @@ class GnuGetopt < Formula
   license "GPL-2.0-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "96d951b721c22830f976066f8704424bb065f1814fbd6d86fcd5f3996679db81"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "7185fed500da9746d2249185f6fdbb93a7d08dd85661c5699c768004927e010e"
-    sha256 cellar: :any_skip_relocation, monterey:       "eee08bd48c1ad6adb71687db5599fe6d593769351d2cd5f9f1f2d485fc69c9b8"
-    sha256 cellar: :any_skip_relocation, big_sur:        "4951cfe10db08f60f663b717a03a01be7a774ac717be30d19a2c36fdbb38c7ca"
-    sha256 cellar: :any_skip_relocation, catalina:       "858025570517573d8254ee63717256cdfaea66def67cc0a5675a800deb0c674f"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "44292ce4da02a035699014bc56f714825399406ab8e3b9b5480a9e293a90af2f"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/gnu-getopt"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "02425c7e47b36d463e189f5276c1177a271e4d5ec246cc006a06276ee70b80a3"
   end
 
   keg_only :provided_by_macos
