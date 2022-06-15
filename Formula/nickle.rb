@@ -11,11 +11,9 @@ class Nickle < Formula
   end
 
   bottle do
-    sha256 monterey:     "b1258d434acb09bb06f6a466a0e895fabbe2469c38d45da48ca8fe8a98d64e4a"
-    sha256 big_sur:      "6e377f6674d6609f634b28941d8c53fef94c9cb429f31d1c765e4a5d8607e88d"
-    sha256 catalina:     "3e1d028467ee41d963e9eaa9809f288fbc3effd826e09ae69bd4e4bfd26679c5"
-    sha256 mojave:       "6fa77667c30e0dfa186868159076bd2e003c34d32624915481f8c52e68b97f23"
-    sha256 x86_64_linux: "a80572816adbeb145a3dd76b327bff79653d6ff504eba14b9fb767e73c64a992"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/nickle"
+    rebuild 1
+    sha256 armv7l_linux: "af164c29be41eecf04efc24c7263a746986c1b9b60813e12092b0966a6803d1a"
   end
 
   depends_on "readline"
