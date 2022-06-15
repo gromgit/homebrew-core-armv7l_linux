@@ -6,7 +6,9 @@ class Libnsl < Formula
   license "LGPL-2.1-or-later"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3b5adecb3863612dbba0ab392e1c33b9c69b6e68532c30eaa6b7032181bfc855"
+    root_url "https://github.com/gromgit/homebrew-core-armv7l_linux/releases/download/libnsl"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, armv7l_linux: "8049adba0d0a5caaf2c1d4e09ccc23c96c902cb0d4ccf4f1428b527221baf2cb"
   end
 
   keg_only "it conflicts with glibc"
